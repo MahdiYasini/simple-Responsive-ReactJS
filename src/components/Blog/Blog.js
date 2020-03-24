@@ -2,6 +2,10 @@ import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core'
 
+import Home from '../Home/Home';
+import About from '../About/About';
+import Contact from '../Contact/Contact'
+
 const useStyles = makeStyles({
     navbar: {
         backgroundColor: "#333",
@@ -18,7 +22,7 @@ const useStyles = makeStyles({
             listStyle: "none",
             margin: "0",
             float: "right"
-        },
+        }, 
         "& ul li": {
             float: "left"
         },
@@ -41,45 +45,60 @@ const useStyles = makeStyles({
             color: "#f7c08a",
         }
     },
-    container: {
-        margin: "auto",
-        maxWidth: "1100px",
-        overflow: "auto",
-        padding: "0 20px"
+    footer: {
+
+        textAlign: "center",
+        background: "#444",
+        color: "white",
+        padding: "20px"
+    },
+    clr: {
+        clear: "both"
     }
 });
 
 const Blog = () => {
     const classes = useStyles();
     return (
-        <header>
-            <nav className={classes.navbar}>
-                <div className = {classes.container}>
-                <h1 classes={classes.logo}>
-                    <Link to="/">
-                        Must See IRAN
+        <>
+            <header>
+                <nav className={classes.navbar}>
+                    <div className= "container">
+                        <h1 classes={classes.logo}>
+                            <Link to="/">
+                                Must See IRAN
                     </Link>
-                </h1>
-                <ul>
-                    <li className = {classes.current}>
-                        <Link to="/">
-                            Home
+                        </h1>
+                        <ul>
+                            <li className={classes.current}>
+                                <Link to="/">
+                                    Home
                         </Link>
-                    </li>
-                    <li>
-                        <Link to="/about">
-                            About
+                            </li>
+                            <li>
+                                <Link to="/about">
+                                    About
                         </Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">
-                            Contact
+                            </li>
+                            <li>
+                                <Link to="/contact">
+                                    Contact
                         </Link>
-                    </li>
-                </ul>
-                </div>
-            </nav>
-        </header>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <Switch>
+                <Route path = "/" exact component = {Home}/>
+                <Route path = "/about" exact component = {About}/>
+                <Route path = "/contact" exact component = {Contact}/>
+            </Switch>
+            <div className = {classes.clr}></div>
+            <footer className = {classes.footer}>
+                <p>ABOuZAR &copy; 2020, All Rights Reserved.</p>
+            </footer>
+        </>
     )
 };
 
