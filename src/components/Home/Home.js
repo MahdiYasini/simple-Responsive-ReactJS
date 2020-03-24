@@ -73,7 +73,7 @@ const useStyles = makeStyles({
     }
 });
 
-const Blog = () => {
+const Home = () => {
     const classes = useStyles();
     return (
         <>
@@ -146,4 +146,4 @@ const Blog = () => {
     )
 };
 
-export default Blog;
+export default Home;
