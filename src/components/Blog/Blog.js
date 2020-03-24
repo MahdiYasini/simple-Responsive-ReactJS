@@ -38,13 +38,6 @@ const useStyles = makeStyles({
             textShadow: "#FC0 1px 0 10px"
         },
     },
-    current: {
-        background: "#444",
-        textShadow: "#FC0 1px 0 10px",
-        "& a": {
-            color: "#f7c08a",
-        }
-    },
     footer: {
 
         textAlign: "center",
@@ -70,7 +63,7 @@ const Blog = () => {
                             </Link>
                         </h1>
                         <ul>
-                            <li className={classes.current}>
+                            <li>
                                 <Link to="/">
                                     Home
                                 </Link>
