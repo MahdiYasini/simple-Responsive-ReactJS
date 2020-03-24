@@ -67,23 +67,23 @@ const Blog = () => {
                         <h1 classes={classes.logo}>
                             <Link to="/">
                                 Must See IRAN
-                    </Link>
+                            </Link>
                         </h1>
                         <ul>
                             <li className={classes.current}>
                                 <Link to="/">
                                     Home
-                        </Link>
+                                </Link>
                             </li>
                             <li>
                                 <Link to="/about">
                                     About
-                        </Link>
+                                </Link>
                             </li>
                             <li>
                                 <Link to="/contact">
                                     Contact
-                        </Link>
+                                </Link>
                             </li>
                         </ul>
                     </div>
