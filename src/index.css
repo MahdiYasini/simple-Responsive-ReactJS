@@ -29,9 +29,26 @@ p {
   margin: 10px 0;
 }
 
+/* Global CSS classes */
 .container {
   margin: "auto";
   max-width: "1100px";
   overflow: "auto";
   padding: "0 20px";
+}
+
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #333;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f7c08a;
+  color: #333
 }
